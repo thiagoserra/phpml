@@ -72,9 +72,15 @@ $conjuntoPrevisao = $conjuntoAleatorio->getTestSamples();
 //gerando respostas das amostrar para testar a
 //acuracidade do algoritmo
 $previsaoRespostas = $conjuntoAleatorio->getTestLabels();
+
 echo "------------------------------------------------------------ (C073835) --\n";
 echo "------------------------------------------------------------ PHP-ML -----\n";
 echo "------------------------------------------------------------ v.1 --------\n";
+echo "--> Conjunto de Treino: " . count($conjuntoTeste) ." linhas.\n";
+echo "--> Conjunto para Previsão: " . count($conjuntoPrevisao) ." linhas.\n";
+echo "--> Conjunto Total: " . count($treinamento) ." linhas.\n";
+echo "-------------------------------------------------------------------------\n";
+
 //Instanciando o objeto e fazendo os testes!!
 $algoritmos = array( "Phpml\Classification\NaiveBayes",
                     "Phpml\Classification\KNearestNeighbors",
